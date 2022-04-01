@@ -1,0 +1,281 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@font-face {
+  font-family: body;
+  src: url(./font/body.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: body;
+  font-weight: 400;
+}
+
+body {
+  width: 100%;
+  padding: 110px;
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.collign-col-1 {
+  width: 1200px;
+  height: 600px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.heroImg {
+  width: 700px;
+  height: 500px;
+  pointer-events: none;
+}
+
+.login-box {
+  width: 500px;
+  height: 500px;
+}
+
+.arf {
+  color: rgba(113, 113, 113, 0.903);
+}
+
+.h-t-css {
+  font-weight: 600;
+  margin-bottom: 10px;
+  pointer-events: none;
+}
+
+.heading-text {
+  margin: 25px 0;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.inputBox-div {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.inputBox {
+  width: 350px;
+  height: 76px;
+  border: none;
+  background: #edf2f5;
+  padding-left: 15px;
+}
+
+.ar {
+  border-radius: 10px 10px 0 0;
+}
+
+.cr {
+  border-radius: 0 0 10px 10px;
+}
+
+.check-div {
+  width: 150px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.arrt {
+  color: #616161;
+}
+
+.checkbox {
+  --border-default: #bbbbc1;
+  --border-hover: #9898a3;
+  --active: #e23556;
+  --active-tick: #ffffff;
+  display: block;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.checkbox svg {
+  display: block;
+  position: absolute;
+}
+
+.checkbox input {
+  display: block;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 36% / 36%;
+  -webkit-box-shadow: inset 0 0 0 1.5px var(--border, var(--border-default));
+          box-shadow: inset 0 0 0 1.5px var(--border, var(--border-default));
+  background: var(--background, transparent);
+  -webkit-transition: background .25s linear, -webkit-box-shadow .25s linear;
+  transition: background .25s linear, -webkit-box-shadow .25s linear;
+  transition: background .25s linear, box-shadow .25s linear;
+  transition: background .25s linear, box-shadow .25s linear, -webkit-box-shadow .25s linear;
+}
+
+.checkbox input + svg {
+  width: 21px;
+  height: 18px;
+  left: 0;
+  top: 0;
+  color: var(--active);
+}
+
+.checkbox input + svg .tick {
+  stroke-dasharray: 20;
+  stroke-dashoffset: var(--stroke-dashoffset, 20);
+  -webkit-transition: stroke-dashoffset .2s;
+  transition: stroke-dashoffset .2s;
+}
+
+.checkbox input + svg .tick.mask {
+  stroke: var(--active-tick);
+}
+
+.checkbox input + svg + svg {
+  width: 11px;
+  height: 11px;
+  fill: none;
+  stroke: var(--active);
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  top: -6px;
+  right: -10px;
+  stroke-dasharray: 4.5px;
+  stroke-dashoffset: 13.5px;
+  pointer-events: none;
+  -webkit-animation: var(--animation, none) 0.2s ease 0.175s;
+          animation: var(--animation, none) 0.2s ease 0.175s;
+}
+
+.checkbox input:checked {
+  --background: var(--active);
+  --border: var(--active);
+}
+
+.checkbox input:checked + svg {
+  --stroke-dashoffset: 0;
+}
+
+.checkbox input:checked + svg + svg {
+  --animation: check;
+}
+
+.checkbox:hover input:not(:checked) {
+  --border: var(--border-hover);
+}
+
+@-webkit-keyframes check {
+  100% {
+    stroke-dashoffset: 4.5px;
+  }
+}
+
+@keyframes check {
+  100% {
+    stroke-dashoffset: 4.5px;
+  }
+}
+
+.loginButton {
+  margin: 20px 0;
+  width: 350px;
+  height: 56px;
+  border-radius: 5px;
+  background: #e23556;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.loginButton:hover {
+  background: #eb5470;
+}
+
+.signUp {
+  color: #e23556;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .heroImg {
+    display: none;
+  }
+  .loginHero {
+    display: none;
+  }
+  .collign-col-1 {
+    width: 100%;
+  }
+  .login-box {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .heroImg {
+    display: none;
+  }
+  .loginHero {
+    display: none;
+  }
+  .collign-col-1 {
+    width: 100%;
+  }
+  .login-box {
+    width: 100%;
+    position: absolute;
+    left: 25px;
+  }
+  .inputBox {
+    width: 350px;
+  }
+  .loginButton {
+    width: 350px;
+  }
+}
+/*# sourceMappingURL=App.css.map */
